@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер задач и точка</title>
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./dist/index.js" type="module"></script>
+</head>
+<body>
+    <main id="app">
+        <h1 class="title">Менеджер задач и точка</h1>
+        <form class="new-task">
+            <input name="title" class="title-input" type="text" placeholder="Заголовок" required>
+            <input name="description" class="description-input" type="text" placeholder="Описание" required>
+            <input name="deadline" class="deadline-input" type="datetime-local">
+            <input name="location" class="location-input" type="text" placeholder="Место проведения">
+            <input name="assignee" class="assignee-input" type="text" placeholder="Ответственное лицо">
+            <div>
+                <label for="completed">выполнено: </label>
+                <input name="completed" type="checkbox" class="status-input">
+            </div>
+            <button type="submit" class="create">создать</button>
+        </form>
+
+        <div class="filter-block">
+            <label for="completed">только не выполненные: </label>
+            <input name="completed" type="checkbox" class="filter-completed" data-type="completed">
+        </div>
+
+        <ul class="task-list"></ul>
+    </main>
+</body>
+</html>
